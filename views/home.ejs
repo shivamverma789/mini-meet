@@ -1,0 +1,62 @@
+<!-- views/home.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Meet - Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    h1 {
+      color: #333;
+    }
+    button, input {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+    }
+    input {
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Mini Meet 🚀</h1>
+  
+  <button onclick="createRoom()">Create a Room</button>
+  
+  <form id="joinRoomForm">
+    <input type="text" id="roomIdInput" placeholder="Enter Room ID" required />
+    <button type="submit">Join Room</button>
+  </form>
+
+  <script>
+    function createRoom() {
+      const roomId = Math.random().toString(36).substring(2, 10);
+      window.location.href = `/room/${roomId}`;
+    }
+
+    const joinRoomForm = document.getElementById('joinRoomForm');
+    joinRoomForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const roomId = document.getElementById('roomIdInput').value;
+        if (roomId) {
+            window.location.href = `/room/${roomId}`;
+        }
+    });
+  </script>
+</body>
+</html>

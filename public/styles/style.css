@@ -1,0 +1,71 @@
+.home-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f2f2f2;
+    font-family: Arial, sans-serif;
+  }
+  
+  .home-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .create-room-btn, .join-room-btn {
+    padding: 10px 20px;
+    margin: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .create-room-btn:hover, .join-room-btn:hover {
+    background: #45a049;
+  }
+  
+  .join-room-form {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .room-id-input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .room-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f9f9f9;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .room-id-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .video-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .video {
+    width: 300px;
+    height: 200px;
+    background: black;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
